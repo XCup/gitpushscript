@@ -55,14 +55,12 @@ $(document).ready(function(){
                 if(type==0){
                     alert("push成功！");
                     for(var i=0;i<=re.filename.length;i=i+2){
-                        var nr = "<tr>
-                          <td>"+re.filename[i]+"</td>
-                            <td>"+re.filename[i+1]+"</td>
-                        </tr>";
+                        var nr = "<tr>\n" +
+                            "        <td>"+re.filename[i]+"</td>\n" +
+                            "        <td>"+re.filename[i+1]+"</td>\n" +
+                            "    </tr>";
                         $("#filename").append(nr);
                     }
-                   }
-
                 }else if(type==1){
                     alert("查看工作区状态错误");
                 }else if(type==2){

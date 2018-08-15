@@ -88,19 +88,19 @@ class indexHandler(tornado.web.RequestHandler):
                 self.write(json.dumps({'type': 5}))
                 self.finish()
             else:
-                # r = requests.get('https://github.com/XCup/gitpushscript')
-                # # print(r.text)
-                #
-                # soup = BeautifulSoup(r.text, 'lxml')
-                # find = str(soup.find_all('span'))
-                # # print(find)
-                # key = find
-                # # p1 = r"(?<=title=\").*?(?=\">)"
-                # pattern1 = re.findall('(?<=title=\").*?(?=\">)', key, re.S)
-                # # pattern1 = re.compile(p1)
-                # # matcher1 = re.search(pattern1,key)
-                # # print(matcher1.group())
-                # print(pattern1)
+                r = requests.get('https://github.com/XCup/gitpushscript')
+                # print(r.text)
+
+                soup = BeautifulSoup(r.text, 'lxml')
+                find = str(soup.find_all('span'))
+                # print(find)
+                key = find
+                # p1 = r"(?<=title=\").*?(?=\">)"
+                pattern1 = re.findall('(?<=title=\").*?(?=\">)', key, re.S)
+                # pattern1 = re.compile(p1)
+                # matcher1 = re.search(pattern1,key)
+                # print(matcher1.group())
+                print(pattern1)
                 print("上传成功")
                 self.set_header('Content-Type', 'application/json; charset=UTF-8')
                 self.write(json.dumps({'type': 0}))

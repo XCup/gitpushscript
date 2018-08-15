@@ -104,7 +104,7 @@ class indexHandler(tornado.web.RequestHandler):
                 print(pattern1)
                 print("上传成功")
                 self.set_header('Content-Type', 'application/json; charset=UTF-8')
-                self.write(json.dumps({'type': 0,'filename':pattern1}))
+                self.write(json.dumps({'type': 0,'filename':[pattern1]}))
                 self.finish()
 
         # 执行一哈

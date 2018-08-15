@@ -54,11 +54,10 @@ $(document).ready(function(){
                 var type=re.type;
                 if(type==0){
                     alert("push成功！");
-                    var filenames[] = re.filename;
                     for(var i=0;i<=re.filename.length;i=i+2){
                         var nr = "<tr>
-                          <td>"+filenames[i]+"</td>
-                            <td>"+filenames[i+1]+"</td>
+                          <td>"+re.filename[i]+"</td>
+                            <td>"+re.filename[i+1]+"</td>
                         </tr>";
                         $("#filename").append(nr);
                     }

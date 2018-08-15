@@ -17,27 +17,21 @@
 </form>
 <table id="filename" border="1">
     <tr>
-        <th id="test">file</th>
-        <th>-m</th>
+        <td></td>
+        <td></td>
     </tr>
-    <te>
-        <th></th>
-        <th></th>
-    </te>
 </table>
 <p>这里是pull</p>
 <form id="formpull" action="http://localhost:8889/pull" method="post">
     <input type="submit" value="拉取">
 </form>
 <!--123-->
-<script type="text/javascript">
+<script>
 $(document).ready(function(){
   $("push").click(function(){
     $("p").hide();
   });
 });
-</script>
-<script type="text/javascript">
     $(document).ready(function () {
         $("#formpush").submit(function(){
                 submitrate();//提交登录信息
@@ -60,8 +54,15 @@ $(document).ready(function(){
                 var type=re.type;
                 if(type==0){
                     alert("push成功！");
-                    alert(re.filename);
-                    $("#test").html(re.filename[0]);
+                    var filenames = re.filename;
+                    for(var i=0;i<=re.filename.length;i=i+2){
+                        var nr = "<tr>
+        <td>"+filenames[i]+"</td>
+        <td>"+filenames[i+1]+"</td>
+    </tr>";
+                        $("#filename").append(nr);
+                    }
+
                 }else if(type==1){
                     alert("查看工作区状态错误");
                 }else if(type==2){

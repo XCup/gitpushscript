@@ -100,6 +100,7 @@ class indexHandler(tornado.web.RequestHandler):
                 # pattern1 = re.compile(p1)
                 # matcher1 = re.search(pattern1,key)
                 # print(matcher1.group())
+                # 123
                 print(pattern1)
                 print("上传成功")
                 self.set_header('Content-Type', 'application/json; charset=UTF-8')

@@ -88,7 +88,7 @@ class indexHandler(tornado.web.RequestHandler):
                 self.write(json.dumps({'type': 5}))
                 self.finish()
             else:
-                r = requests.get('https://github.com/XCup/gitpushscript')
+                r = requests.get('https://github.com/XCup/httpgit.git')
                 # print(r.text)
 
                 soup = BeautifulSoup(r.text, 'lxml')

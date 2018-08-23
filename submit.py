@@ -32,7 +32,7 @@ def commit():
     process.wait()
     archiveReturnCode = process.returncode
     if archiveReturnCode != 0:
-        print ("提交失败")git
+        print ("提交失败")
     else:
         print ("提交成功"),inputNote
         pull()
